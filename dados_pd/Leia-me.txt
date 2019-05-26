@@ -64,20 +64,22 @@ Sendo:
  para um valor entre 0 e 1000.
 
 <zona>: corresponde a zona urbana (Centro, Zona Leste, Zona Oeste, Zona Norte e Zona Sul)
- onde o ponto de parada de ônibus está localizado. (AINDA NÃO IMPLEMENTADO)
+ onde o ponto de parada de ônibus está localizado.
 
 
 ------------------------------------------------------------------------------------------
 
 Os datasets trajetos_* estão formatados para uso com o objeto [text] do Pd. Cada linha contém:
 
-<id do trajeto> <avgspeed>;
+<id do trajeto> <distância> <avgspeed>;
 
 Sendo:
 
 <id do trajeto>: Identificador de um link que faz ligação de dois determinados pontos  de
  paradas de ônibus da cidade. No nosso caso o ponto de saída e chegada de uma linha de
  ônibus.
+
+<distância>: Valor em metros do comprimento do trajeto.
 
 <avgspeed>: Lista que representa as velocidades médias de uma linha de ônibus, ao longo
  do dia. A lista possui 24 posições, variando de 0 a 23, onde cada posição da lista
@@ -91,10 +93,16 @@ Sendo:
 ##########################################################################################
 ------------------------------------------------------------------------------------------
 Sobre a fonte de dados, todos os dados foram extraidos de datasets disponibilizados pelo
-projeto Interscity.
+projeto Interscity, com excessão dos dados de <zona> que foram extraidos por meio da
+plataforma CEP aberto, em conjunto com informações sobre correspondência entre CEP e
+Zona urbana.
 
 Para maiores detalhes leia o arquivo README.md do dataset original Bus movement model no
 site do Interscity. Disponível em: http://interscity.org/open_data/
+
+Para saber mais sobre CEP aberto: http://cepaberto.com/
+
+Sobre CEP e Zona Urbana: https://thiagorodrigo.com.br/artigo/cep-sao-paulo-lista-de-cep-por-bairro-e-cidade-da-grande-sao-paulo/
 
 ------------------------------------------------------------------------------------------
 ##########################################################################################
