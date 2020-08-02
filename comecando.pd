@@ -1,0 +1,35 @@
+#N canvas 435 234 685 279 10;
+#X declare -path ./biblioteca;
+#X obj 23 67 declare -path ./biblioteca;
+#X obj 195 218 buzuDados;
+#X text 188 66 <-- declaração para acessar o diretório onde estão
+presentes;
+#X obj 103 136 dados_interscity;
+#N canvas 0 22 846 497 cabeçalho 0;
+#X obj 100 100 cnv 15 680 35 empty \$0-cabecalho Instruções\ para\ utilizar\ o\ objeto\ [buzuDados]\ no\ seu\ projeto
+20 16 0 14 -233017 -66577 0;
+#X obj 273 342 fudiformat -u;
+#X obj 273 423 s \$0-cabecalho;
+#X obj 273 363 list tosymbol;
+#X msg 273 384 label \$1;
+#X msg 273 300 Instruções para utilizar o objeto [buzuDados] no seu
+projeto;
+#X msg 292 323 buzu;
+#X obj 273 247 loadbang;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 5 0;
+#X coords 0 -1 1 1 680 35 2 100 100;
+#X restore 2 2 pd cabeçalho;
+#X text 134 196 O objeto [buzuDados] retorna os dados no dataset [dados_interscity]
+, f 67;
+#X text 259 218 <-- clique com o botão direito e vá em Ajuda para
+ter acesso à, f 62;
+#X text 285 232 documentação do objeto;
+#X text 212 78 os objetos [buzuDados] e [dados_interscity] \, que retornam
+o dataset formatado para ser usado no Pd, f 56;
+#X text 210 135 <-- carrega o dataset na memória para ser usado pelo
+[buzuDados], f 65;
